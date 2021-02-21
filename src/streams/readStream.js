@@ -7,6 +7,7 @@ let fileTxt = "";
 // Reading files with streams causes your application to use less memory
 // because instead of reading everything all at once and loading it into a buffer,
 // you're reading files bit by bit and chunk by chunk
+// On to process all stream chunks
 readStream.on("data", (data) => {
   console.log(`I read ${data.length - 1} characters of text`);
   fileTxt += data;
